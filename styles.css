@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body{
+    height: 450vh;
+}
+
+body {
+    background-color: #EAEA7F;
+    font-family: 'Helvetica Neue', Times, serif;
+}
+
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.logo {
+    margin-top: 500px;
+}
+
+
+.ondas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@keyframes onda1 {
+    from {
+        transform: translateX(-2000px);
+    }
+}
+
+@keyframes onda2 {
+    from {
+        transform: translateX(-1800px);
+    }
+}
+
+@keyframes onda3 {
+    from {
+        transform: translateX(-1600px);
+    }
+}
+
+.onda-1 {
+    animation: onda1 3s ease-in-out infinite alternate;
+}
+
+.onda-2 {
+    animation: onda2 4s ease-in-out infinite alternate;
+}
+
+.onda-3 {
+    animation: onda3 5s ease-in-out infinite alternate;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333C83;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: black;
+}
+
+form {
+    margin: 20px 0;
+    padding: 30px 25px;
+    border-radius: 5px;
+    animation: aparecer 1.5s;
+    overflow: hidden;
+    z-index: 50;
+}
+
+form .inserir {
+    margin-bottom: 20px;
+    animation: campos 1s;
+}
+
+form .inserir label {
+    font-size: 30px;
+    color: #1B1A17;
+}
+
+form .inserir input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 20px;
+    color: #1B1A17;
+    border-radius: 5px;
+    border: 1px solid #ccddef;
+    outline: #1B1A17;
+}
+
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: #333C83;
+    color: #FCECDD;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+}
+
+form .btn-login:hover{
+    background-color: cadetblue;
+    transition: 0.5s ease-in-out;
+}
+
+.esconder-form {
+  animation: botao 1s forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes campos{
+    from {
+      transform: translateX(-35%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+}
+
+@keyframes botao {
+    from {
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
